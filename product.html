@@ -7,19 +7,87 @@
 		<title>Static - SINGLE PRODUCT</title>
 
 		<link rel="stylesheet" href="./CSS/general.css" />
-		<link rel="stylesheet" href="" />
+		<link rel="stylesheet" href="./CSS/style.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Poppins:wght@100..900&family=Open+Sans:wght@100..900&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
-		<header></header>
+		<header class="nav-container">
+			<h4 class="logo"><a href="./index_categories.html">FashionRUs</a></h4>
+			<!-- Skal laves til Logo -->
+			<nav>
+				<a href="index_categories.html">Categories</a>
+				<a href="">Brands</a>
+				<a href="">Seasons</a>
+			</nav>
+		</header>
 
 		<main>
 			<section class="single-product-container">
-				<h4 class="title">Product</h4>
-				<article class="single-product"></article>
+				<article class="product-img">
+					<img src="./IMAGES/Product images/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey" />
+				</article>
+				<article class="product-info">
+					<h5 class="model-name">Sahara Team India Fanwear Round Neck Jersey</h5>
+					<dl>
+						<dt>Color</dt>
+						<dd>Blue</dd>
+						<dt>Inventory number</dt>
+						<dd>1163</dd>
+					</dl>
+					<article class="product-slogan">
+						<h5>Nike</h5>
+						<p>Nike, creating experiences for today's athlete</p>
+					</article>
+				</article>
+				<article class="choice-box">
+					<h5 class="model-name">Sahara Team India Fanwear Round Neck Jersey</h5>
+					<div class="p-categories">
+						<p class="type">Tshirts</p>
+						<p class="separator">|</p>
+						<p class="brand">Nike</p>
+					</div>
+					<div class="sizes">
+						<form class="sizes-form">
+							<div class="select-size">
+								<h6>Size:</h6>
+								<label for="sm">
+									<input type="radio" id="small" name="sm" />
+									<span>S</span>
+								</label>
+								<label for="m">
+									<input type="radio" id="medium" name="m" />
+									<span>M</span>
+								</label>
+								<label for="l">
+									<input type="radio" id="large" name="lg" />
+									<span>L</span>
+								</label>
+								<label for="xl">
+									<input type="radio" id="x-large" name="xl" />
+									<span>XL</span>
+								</label>
+								<label for="xxl">
+									<input type="radio" id="xx-large" name="xxl" />
+									<span>XXL</span>
+								</label>
+							</div>
+						</form>
+					</div>
+					<div class="quantity">
+						<div class="select-quantity">
+							<h6>Quantity:</h6>
+							<input type="number" name="quantity" value="1" />
+						</div>
+					</div>
+					<div>
+						<div class="sub-btn">
+							<button class="submit">Add to cart</button>
+						</div>
+					</div>
+				</article>
 			</section>
 		</main>
 
