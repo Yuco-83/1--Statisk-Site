@@ -9,11 +9,16 @@ function showProduct(productData) {
 	console.log(productData);
 
 	// Vælge noget i min DOM med "document.querySelector" - "(Specifikt sted i min HTML)" - med info typpen ".textContent = showProduct data" - Specifikt sted i min ".DATA" i min library
+	document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${productData.id}.webp`;
+
 	document.querySelector(".info-list .name").textContent = productData.productdisplayname;
 	document.querySelector(".info-list .color").textContent = productData.basecolour;
 	document.querySelector(".info-list .id").textContent = productData.id;
 
-	document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${productData.id}.webp`;
+	document.querySelector(".product-slogan h5").textContent = productData.brandname;
+	document.querySelector(".product-slogan p").textContent = productData.brandbio;
+
+	document.querySelector(".choice-box h5").textContent = productData.productdisplayname;
 }
 
 /* 
