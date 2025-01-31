@@ -7,13 +7,13 @@ fetch("https://kea-alt-del.dk/t7/api/products/1163")
 
 function showProduct(productData) {
 	console.log(productData);
+
+	// Vælge noget i min DOM med "document.querySelector" - "(Specifikt sted i min HTML)" - med info typpen ".textContent = showProduct data" - Specifikt sted i min ".DATA" i min library
 	document.querySelector(".info-list .name").textContent = productData.productdisplayname;
 	document.querySelector(".info-list .color").textContent = productData.basecolour;
 	document.querySelector(".info-list .id").textContent = productData.id;
 
-	document.querySelector(
-		"img"
-	).src = `http://assets.myntassets.com/v1/assets/banners/2015/6/26/1435317851398-23197-3chxv6${productData.id}.jpg`;
+	document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${productData.id}.webp`;
 }
 
 /* 
