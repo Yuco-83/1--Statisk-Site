@@ -7,8 +7,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/`)
 {
 	function showList(products) {
 		console.log(products);
-		products.map((product) => {
-			`<article class="product">
+		let markup = "";
+		products
+			.map((product) => {
+				markup += `<article class="product">
 				<img src="./IMAGES/Product images/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey" />
 				<h6 class="product_name">Sahara Team India Fanwear Round Neck Jersey</h6>
 				<div class="p-categories">
@@ -27,7 +29,10 @@ fetch(`https://kea-alt-del.dk/t7/api/products/`)
 					Read More
 				</a>
 			</article>;`;
-		});
+			})
+			.join("");
+		console.log(markup);
+		listOContainer.innerHTML = markup;
 	}
 	// productContainer.innerHTML = `JSON kode her`;
 }
