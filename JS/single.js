@@ -1,25 +1,35 @@
-// --- Link til produktet
+// --- Link til produktet (En URTIGERE måde at FETCH på)
+
+const productContainer = document.querySelector(".productContainer");
+const productId = 1530;
+fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
+	.then((response) => response.json())
+	.then((data) => {
+		productContainer.innerHTML = `JSON kode her`;
+	});
+
+// --- Link til produktet (En langsom måde at FETCH på)
 // https://kea-alt-del.dk/t7/api/products/1525
 
-fetch("https://kea-alt-del.dk/t7/api/products/1163")
-	.then((response) => response.json())
-	.then((data) => showProduct(data));
+// fetch("https://kea-alt-del.dk/t7/api/products/1163")
+// .then((response) => response.json())
+// .then((data) => showProduct(data));
 
-function showProduct(productData) {
-	console.log(productData);
+// function showProduct(productData) {
+// 	console.log(productData);
 
-	// Vælge noget i min DOM med "document.querySelector" - "(Specifikt sted i min HTML)" - med info typpen ".textContent = showProduct data" - Specifikt sted i min ".DATA" i min library
-	document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${productData.id}.webp`;
+// 	// Vælge noget i min DOM med "document.querySelector" - "(Specifikt sted i min HTML)" - med info typpen ".textContent = showProduct data" - Specifikt sted i min ".DATA" i min library
+// 	document.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${productData.id}.webp`;
 
-	document.querySelector(".info-list .name").textContent = productData.productdisplayname;
-	document.querySelector(".info-list .color").textContent = productData.basecolour;
-	document.querySelector(".info-list .id").textContent = productData.id;
+// 	document.querySelector(".info-list .name").textContent = productData.productdisplayname;
+// 	document.querySelector(".info-list .color").textContent = productData.basecolour;
+// 	document.querySelector(".info-list .id").textContent = productData.id;
 
-	document.querySelector(".product-slogan h5").textContent = productData.brandname;
-	document.querySelector(".product-slogan p").textContent = productData.brandbio;
+// 	document.querySelector(".product-slogan h5").textContent = productData.brandname;
+// 	document.querySelector(".product-slogan p").textContent = productData.brandbio;
 
-	document.querySelector(".choice-box h5").textContent = productData.productdisplayname;
-}
+// 	document.querySelector(".choice-box h5").textContent = productData.productdisplayname;
+// }
 
 /* 
 {
