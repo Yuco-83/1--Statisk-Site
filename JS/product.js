@@ -7,3 +7,12 @@
 //           productContainer.innerHTML = `
 
 //      });
+
+const productContainer = document.querySelector(".productContainer");
+const productId = 1530;
+
+fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
+	.then((response) => response.json())
+	.then((data) => {
+		productContainer.innerHTML = `JSON kode her`;
+	});
