@@ -12,7 +12,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/`)
 			.map((product) => {
 				markup += `<article class="product onSale">
                     <div class="sold-out">${product.soldout}</div>
-				<img src="./IMAGES/Product images/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey" />
+				<img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}" />
 				<h6 class="product_name">${product.productdisplayname}</h6>
 				<div class="p-categories">
 					<p class="type">${product.articletype}</p>
